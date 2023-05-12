@@ -30,7 +30,7 @@ export default function BallotClientPage({ballots}: Props) {
           <h2 className="text-3xl my-4 text-center">{ballot.title}</h2>
           <ul className="flex flex-col gap-2">
             {ballot.items.map((nominee) => (
-              <li className="flex justify-between p-4" key={nominee.id} style={{backgroundColor: votes.get(ballot.title)?.id === nominee.id ? '#a38a17' : 'none'}}>
+              <li className="flex justify-between p-4" key={nominee.id} style={{backgroundColor: votes.get(ballot.title)?.id === nominee.id ? '#a38a17' : '#121212'}}>
                 <span>{nominee.title}</span>
                 <button className="border border-solid gradient-border transition-all ml-4 px-4 select-none" onClick={() => handleVote(ballot.title, nominee)}>Vote</button>
             </li>
